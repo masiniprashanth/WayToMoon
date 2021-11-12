@@ -1,0 +1,75 @@
+<mat-toolbar class="toolbar">
+  <button mat-button (click)="home()">
+    <mat-icon class="home">home</mat-icon>
+  </button>
+  <br>
+  <br>
+  <button mat-button  class="toolbarbtn" (click)="back()" >
+    <span class="material-icons">
+      arrow_back
+      </span>
+  </button>
+  <span  class="ngcontent-pdc-c1">Passenger Details</span>
+  <div fxFlex fxLayoutAlign="flex-end center" >
+    <button mat-button  class="toolbarbtn" (click)="details()" class="ngcontent-pdc-c2">
+        <mat-icon class="list">list</mat-icon></button>
+  </div>
+ 
+</mat-toolbar>
+     <mat-card >
+     <form [formGroup]="userProfileForm" (ngSubmit)="onSubmit()">
+      <div fxFlex="20%"> 
+          <label>Name  :</label>
+      <mat-form-field class="example-full-width">  
+          <input matInput  type="text" placeholder=""   formControlName="RocketName">
+      </mat-form-field>
+      </div>
+      
+      <div fxFlex="20%">
+          <label>Last Name  :</label>
+          <br>
+      <mat-form-field class="example-full-width">  
+          <input matInput  type="text" placeholder=""  formControlName="Distance">
+      </mat-form-field>
+      </div>
+     
+      <div fxFlex="20%">
+          <label>Enter Date of Birth :</label>
+      <mat-form-field class="example-full-width">  
+          <input matInput  type="date"  formControlName="Date">
+      </mat-form-field>
+      </div>
+      <br>
+      <br>
+      <br>
+
+      <div fxFlex="20%">
+          <label>T!me  :</label>
+      <mat-form-field class="example-full-width">  
+          <input matInput  type="text" placeholder=""  formControlName="time">
+      </mat-form-field>
+      </div>
+
+      <div fxFlex="20%">
+          <label>Members  :</label>
+      <mat-form-field class="example-full-width">  
+          <input matInput  type="number" placeholder="" formControlName="EnterMembers">
+      </mat-form-field>
+      </div> 
+       
+      <div  fxFlex="20%">
+          <button mat-raised-button  type="submit" color="warn" (click)="openSnackBar()" class="btnSubmit" >submit</button>
+      </div>
+      </form>
+<h4>Message</h4>
+  {{message}}
+  <br>
+  <br>
+  <br>
+  
+ 
+</mat-card>
+<br>
+<br>
+<app-client-chat  (messageEvent)="receiveMessage($event)"></app-client-chat>
+

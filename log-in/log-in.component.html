@@ -1,0 +1,47 @@
+  <mat-toolbar class="toolbar">
+    <button mat-button>
+      <mat-icon class="menuicon">menu</mat-icon>
+    </button>
+    <br>
+    <br>
+    <button mat-button  class="toolbarbtn" (click)="adminLogIn()">
+      Admin
+    </button>
+    <span class="ngcontent-pdc-c1">Space Tour--></span>
+  </mat-toolbar>
+  <div fxLayout="row">
+  <mat-card fxFlex="100%" class="card1"> 
+    <mat-card-title class="title" fxLayout.lt-sm="column">Over The Space! :)</mat-card-title> 
+    <form [formGroup]="logIn"> 
+  <div fxLayout="column" class="card3" fxLayoutAlign="center center" >
+      <h4 class="title1">LogIn</h4>
+     
+      <mat-form-field class="example-full-width" >
+        <mat-label class="label">User Name</mat-label>
+        <input matInput formControlName="Name" >
+        <!-- <mat-error *ngIf="logIn.get(Name).invalid">Invaid UserName</mat-error> -->
+      </mat-form-field>
+      <mat-form-field class="example-full-width" >
+        <mat-label  class="label">Password</mat-label>
+        <input matInput  type="password" formControlName="Formpassword">
+       </mat-form-field> 
+    
+    <mat-card-actions class="mat-card-actions"  fxLayoutAlign="center center">
+      <br>
+      <br>
+      <button mat-raised-button  class="btn2" (click)="openSnackBar()">Log!n</button>
+      <br>
+    <br>  
+    </mat-card-actions>
+    <button mat-raised-button color="warn"  class="btn3" (click)="NewAccount()">Create New Account</button>
+  </div>
+</form> 
+</mat-card>
+</div>
+<!-- <mat-divider class="line"></mat-divider> -->
+<br>
+<br>
+
+
+
+

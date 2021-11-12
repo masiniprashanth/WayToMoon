@@ -1,0 +1,89 @@
+
+
+  <mat-toolbar class="toolbar">
+    <button mat-button (click)="home()">
+      <mat-icon class="home">home</mat-icon>
+    </button>
+      <br>
+      <br>
+    <button mat-button  class="toolbarbtn" (click)="back()" >
+        <span class="material-icons">
+        arrow_back
+        </span>
+    </button>
+      <span  class="ngcontent-pdc-c1">Gallery</span>
+      <div fxFlex fxLayoutAlign="flex-end center">
+        <button mat-button  class="toolbarbtn" (click)="cart()">
+          <mat-icon class="shopping_cart" [matBadge]="batchCount" matBadgeColor="warn" >shopping_cart</mat-icon>
+        </button>
+        <button mat-button  class="toolbarbtn" (click)="details()" class="ngcontent-pdc-c2">
+        <span class="material-icons" alt="Details">
+          list
+        </span>
+        </button>
+        <button mat-button  class="toolbarbtn" (click)="chat()" >
+          <mat-icon class="message">message</mat-icon>
+        </button>
+    </div>
+  </mat-toolbar>
+<br>
+<br>
+<h3 class="para"  fxLayoutAlign="space-around center">Choose Your Journey </h3>
+<br>
+
+  <div fxLayout="row wrap" fxLayoutAlign="space-around center" fxLayoutGap="20px" fxLayout.lt-sm="column" >
+    <ng-container *ngFor="let Planets of galleryDetails; let i=index" >
+      <div fxFlex-sm="25%">
+  <mat-card class="card2">
+      <mat-card-header >
+        <mat-card-title class="title" > {{Planets.name}}</mat-card-title>
+        <mat-card-subtitle class="title" > {{Planets.Distance}}</mat-card-subtitle>
+      </mat-card-header>
+     <img class="img" mat-card-image src= "{{Planets.image}}" alt="" >
+      <mat-card-content>
+        <h3 style="color: black;">
+           {{Planets.amount | currency:"USD"}}
+        </h3>
+      </mat-card-content>
+      <mat-card-actions>
+        <div fxLayout="row" fxLayoutAlign="end center" >
+        <button mat-button class="btn3" (click)="book(i)">Add To Cart</button>
+        <button mat-button class="btn3" (click)="singleBook(i)">Book</button>
+      </div>
+      </mat-card-actions>	
+  </mat-card>
+  <br>
+  <br>
+</div>
+  </ng-container>
+    </div>
+ 
+
+
+  <app-planet-deatils [childMessage]="bookingsndChild"  (messageEvent)="receiveMessage($event)"></app-planet-deatils>
+  <div fxLayout="row wrap" fxLayoutAlign="space-around center" fxLayoutGap="20px" fxLayout.lt-sm="column">
+    <ng-container *ngFor="let Planets of getEvent; let i=index" >
+      <div fxFlex-sm="25%">
+  <mat-card class="card2">
+      <mat-card-header>
+        <mat-card-title class="title"  fxLayoutAlign="space-around center" >{{Planets.name}}</mat-card-title>
+      <mat-card-subtitle class="title"  fxLayoutAlign="space-around center"> {{Planets.Distance}}</mat-card-subtitle>
+      </mat-card-header>
+     <img class="img" mat-card-image src= "{{Planets.image}}" alt="">
+      <mat-card-content>
+        <h3 style="color: black;">
+         {{Planets.amount | currency:"USD"}}
+        </h3>
+      </mat-card-content>
+      <mat-card-actions>
+        <div fxLayout="row" fxLayoutAlign="end center">
+        <button mat-button class="btn3" (click)="booking(i)">Add To Cart</button>
+        <button mat-button class="btn3" (click)="singleBooking(i)">Book</button>
+      </div>
+      </mat-card-actions>	
+  </mat-card>
+  <br>
+  <br>
+</div>
+  </ng-container>
+    </div>

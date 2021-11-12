@@ -1,0 +1,60 @@
+
+  <mat-toolbar class="toolbar">
+    <button mat-button (click)="home()">
+      <mat-icon class="home">home</mat-icon>
+    </button>
+      <br>
+      <br>
+    <button mat-button  class="toolbarbtn" (click)="back()" >
+        <span class="material-icons">
+        arrow_back
+        </span>
+    </button>
+      <span  class="ngcontent-pdc-c1">Booking</span>
+      <div fxFlex fxLayoutAlign="flex-end center">
+        <button mat-button  class="toolbarbtn" (click)="details()" class="ngcontent-pdc-c2">
+        <span class="material-icons" alt="Details">
+          list
+        </span>
+        </button>
+        <button mat-button  class="toolbarbtn" (click)="chat()" >
+          <mat-icon class="message">message</mat-icon>
+        </button>
+    </div>
+  </mat-toolbar>
+  <br>
+  <br>
+  <div>
+  <div *ngFor="let a of getArray" fxLayout="row" fxLayoutAlign="space-around center">
+    <mat-card class="cardOne" >
+  <div  fxLayout="row" >
+     <img src="{{a.image}}"  width="250" height="200">
+  </div>
+  <div style="padding-left: 15px;" >
+    <h1 style="font-family: 'Courier New', monospace;">{{a.name}}</h1>
+    <p style="font-family: 'Courier New', monospace;"><b>Amount :</b>{{a.amount}}</p>
+    <p style="font-family: 'Courier New', monospace;"><b>Distance :</b>{{a.Distance}}</p>
+      <mat-form-field>
+        <mat-label>Quantity</mat-label>
+        <select matNativeControl required  (change)="selectOption($event.target.value)" [(ngModel)]="selected">
+          <option ><b>Quantity</b></option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+      </mat-form-field>
+      <p style="font-family: 'Courier New', monospace;"><b>TotalPrice :</b>{{totalPrice}}</p>   
+  </div>
+</mat-card>
+</div>
+  </div>
+ 
+ 
+

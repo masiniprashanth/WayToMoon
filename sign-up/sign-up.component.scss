@@ -1,0 +1,63 @@
+.image{
+    background-image: url(../../assets/newlogin.jpg);
+    background-size: cover;
+}
+
+.card{
+    background-color: transparent;
+}
+
+.title{
+    color:white;
+    font-size: 36px;
+    font-weight: 500;
+    font-family: 'Courier New', monospace;
+}
+
+.mat-card>:first-child {
+    margin-top: 100px;
+    margin-bottom: 60px;
+}
+
+.example-full-width{
+    width: 100%;
+    font-family: 'Courier New', monospace;
+    color: white;
+}
+
+//input
+
+
+::ng-deep .mat-focused .mat-form-field-placeholder{
+    color:red;
+  }
+
+  ::ng-deep .mat-focused .mat-form-field-label {
+    /*change color of label*/
+    color: white !important;
+   }
+  
+   ::ng-deep.mat-form-field-underline {
+    /*change color of underline*/
+    background-color:white !important;
+  } 
+  
+  ::ng-deep.mat-form-field-ripple {
+   /*change color of underline when focused*/
+   background-color: white !important;;
+  }
+  
+  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color:white;
+    opacity: 1; /* Firefox */
+  }
+
+  //to this
+
+  .label{
+      color: white;
+  }
+
+  .btn2{
+         margin-top: 34px;
+  }

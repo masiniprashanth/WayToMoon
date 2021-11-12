@@ -1,0 +1,60 @@
+.mat-card>:last-child:not(.mat-card-footer) {
+    margin-bottom: 0;
+    margin-left: 54px;
+}
+.example-full-width{
+    width: 100%;
+}
+
+.division{
+    height: 100%;
+    width: 100%;
+}
+
+// .ngcontent-pdc-c1{
+//     padding: 30px;
+// }
+
+// .mat-card[_ngcontent-brk-c1] > [_ngcontent-brk-c1]:last-child:not(.mat-card-footer) {
+//     margin-bottom: 0;
+//     margin-left: 0px;
+// }
+
+.image{
+    background-image: url(../../assets/booking.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    
+}
+
+.toolbar{
+    display: flex;
+    width: 100%;
+}
+
+// .cartBtn{
+//     color:rgb(89, 84, 84);  
+// }
+.table {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+.img{
+    width:calc(100%+25px);
+}
+// .cardTitle{
+//     text-align: center;
+// }
+
+.cardIn{
+    padding-left: 1px;
+}
+
+.mat-elevation-z8{
+    width: 100%;
+}

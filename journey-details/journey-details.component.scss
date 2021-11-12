@@ -1,0 +1,28 @@
+.image{
+    background: url(../../assets/cropped-1366-768-1117700.jpg);
+    background-repeat: no-repeat;
+    height: 700px;
+}
+.table {
+    width: 100%;
+    text-align: center;
+  }
+  .td{
+      text-align: center;
+      color: rgb(10, 10, 10);
+  }
+  .th{
+      text-align: center;
+      color: rgb(8, 9, 9);
+  }
+  .mat-elevation-z8{
+      width: 100%;
+      background-color: rgb(153, 149, 149);
+      color: rgb(158, 156, 156);
+  }
+  .mat-header-cell{
+      justify-content: left;
+  }
+.mat-cell{
+    justify-content: left;
+}

@@ -1,0 +1,44 @@
+<div fxLayout="row" style="height:100%; width:100%;"  fxFlex-sm="30" fxLayout.lt-sm="column">
+<div fxFlex="70"  style="background-image: url(../../assets/adminLogin.jpg);" class="image">      
+</div>
+<div  fxFlex="30">
+<mat-card  class="card" >
+    <mat-card-title fxLayoutAlign="space-around center">journey-details</mat-card-title>
+    <br>   
+<form [formGroup]="userProfileForm" (ngSubmit)="onSubmit()">
+        <label class="label" >Name  :</label>
+    <mat-form-field class="example-full-width">  
+        <input matInput  type="text"   formControlName="RocketName">
+    </mat-form-field>
+        <label class="label">Distance  :</label>
+    <mat-form-field class="example-full-width">  
+        <input matInput  type="text" formControlName="Distance">
+    </mat-form-field>
+        <label class="label">Date  :</label>
+    <mat-form-field class="example-full-width">  
+        <input matInput  type="date"  formControlName="Date">
+    </mat-form-field>
+        <label class="label">T!me  :</label>
+    <mat-form-field class="example-full-width">  
+        <input matInput  type="text"  formControlName="time">
+    </mat-form-field>
+        <label class="label">Members  :</label>
+    <mat-form-field class="example-full-width">  
+        <input matInput  type="number" formControlName="EnterMembers">
+    </mat-form-field>
+    <div  fxLayout="row" fxLayoutAlign="space-around center">
+        <button mat-raised-button  type="submit" color="warn" (click)="openSnackBar()" class="btnSubmit" >submit</button>
+    </div>
+    <br>
+    </form>
+<br>
+<div fxLayout="row" fxLayoutAlign="space-around center" >
+    <button mat-raised-button  class="btndelete"   (click)="Details()">Details</button>
+</div>
+<br>
+</mat-card>
+</div>
+</div>
+
+
+

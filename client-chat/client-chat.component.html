@@ -1,0 +1,23 @@
+<mat-card  class="card1">
+  <div fxLayout="column" fxLayoutAlign="center start"  fxFlex="20%">
+    <mat-form-field class="example-full-width">  
+        <input matInput  type="text" placeholder="Chat"  [(ngModel)]="message">
+    </mat-form-field>
+      <button mat-raised-button  style="width:40px; height: 40px;" color="warn" (click)="sendMessage()"  class="btnSubmit">send</button>
+      </div>
+      <br>
+      <br>
+  <div fxLayout="row" fxLayoutAlign="center end"   fxLayoutGap="20px" fxLayout.lt-sm="column" >
+    <div *ngFor="let arr of getsArray">
+      <p>Name:- {{arr.RocketName  | uppercase}}</p>
+      <p>LastName:- {{arr.Distance  | uppercase}}</p>
+      <p>D.O.B:- {{arr.Date}}</p>
+      <p>Time:- {{arr.time}}</p>
+      <p>Members:- {{arr.EnterMembers}}</p>
+    </div>
+  </div>
+   <br>
+</mat-card>
+<br>
+<br>
+<br>

@@ -1,0 +1,35 @@
+<div class="image">
+  <div fxLayout="row" fxLayoutAlign="space-around center" >
+ <mat-card class="card" fxFlex="40%">
+  <div fxLayout="row" fxLayoutAlign="space-around center" >
+  <mat-card-title class="title">Sign Up! ^_^ </mat-card-title>
+  </div>
+  <mat-form-field class="example-full-width">
+    <mat-label class="label"  >First Name</mat-label>
+    <input matInput type="text" [(ngModel)]="firstName">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <mat-label  class="label">Last Name</mat-label>
+    <input matInput type="text"  [(ngModel)]="lastName" >
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <mat-label  class="label"  >Email</mat-label>
+    <input matInput type="text">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <mat-label  class="label"  >New Password</mat-label>
+    <input matInput type="password">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <mat-label  class="label" >Confirm Password</mat-label>
+    <input matInput type="password" >
+  </mat-form-field>
+<div fxLayoutAlign="space-around center">
+  <button mat-raised-button (click)="sendName()" class="btn2" >submit</button>
+</div> 
+<div  fxLayoutAlign="space-around center">
+  <button mat-raised-button  class="btn2" (click)="backLog()"  >Back To Log!n</button>
+</div>
+ </mat-card>
+</div>
+</div>
